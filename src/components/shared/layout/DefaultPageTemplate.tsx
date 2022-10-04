@@ -1,11 +1,11 @@
-import { Divider as AntDivider, Layout } from "antd"
-import { ItemType } from "antd/es/menu/hooks/useItems"
-import Head from "next/head"
-import { ReactNode } from "react"
-import styled from "styled-components"
-import { Footer } from "./Footer"
-import { Header } from "./Header"
-import { PageHeaderProps } from "./PageHeader"
+import { Divider as AntDivider, Layout } from 'antd'
+import { ItemType } from 'antd/es/menu/hooks/useItems'
+import Head from 'next/head'
+import { ReactNode } from 'react'
+import styled from 'styled-components'
+import { Footer } from './Footer'
+import { Header } from './Header'
+import { PageHeaderProps } from './PageHeader'
 
 const { Content } = Layout
 
@@ -19,45 +19,25 @@ export function DefaultPageTemplate({
   skipMetaTags,
   pageHeaderProps,
   pageHeaderAfter,
-  pageHeaderTitle,
+  pageHeaderTitle
 }: DefaultPageTemplateProps) {
   const items: ItemType[] = [
     {
-      label: "Programs",
-      key: `/stake/[network]`,
-    },
+      label: 'Programs',
+      key: `/stake/[network]`
+    }
   ]
 
   return (
     <>
       {!skipMetaTags && (
         <Head>
-          <title>Nftfy Rewards</title>
-          <meta property="title" content="Nftfy Rewards" />
-          <meta
-            name="description"
-            content="app.rewards.nftfy.org is a decentralized protocol where you can own rewards staking tokens."
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://app.rewards.nftfy.org/" />
-          <meta property="og:title" content="Nftfy - Rewards Program" />
-          <meta
-            property="og:description"
-            content="app.rewards.nftfy.org is a decentralized protocol where you can own rewards staking tokens."
-          />
-          <meta property="og:image" content="https://nftfy.org/nftfy.jpg" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:url" content="https://nftfy.org/" />
-          <meta name="twitter:title" content="Nftfy - Rewards Program" />
-          <meta
-            name="twitter:description"
-            content="app.rewards.nftfy.org is a decentralized protocol where you can own rewards staking tokens."
-          />
-          <meta name="twitter:image" content="https://nftfy.org/nftfy.jpg" />
+          <title>Boiler Plate</title>
+          <meta property='title' content='Boiler' />
         </Head>
       )}
       <Layout>
-        <Header title="Rewards" items={items} />
+        <Header title='Boiler Plate' items={items} />
         <Divider />
         <Main>{children}</Main>
         <Footer />
@@ -76,5 +56,5 @@ const { Main, Divider } = {
   `,
   Divider: styled(AntDivider)`
     margin: 0;
-  `,
+  `
 }
